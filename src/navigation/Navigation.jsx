@@ -5,7 +5,7 @@ import { HomeStack } from './stacks/HomeStack';
 import { LoginStack } from './stacks/LoginStack';
 import { COLOR_PRIMARIO, COLOR_SECUNDARIO } from '../utils/constantes';
 import Icon from '../components/Icon';
-
+import { FavoritoStack } from './stacks/FavoritoStack';
 const Tab = createBottomTabNavigator();
 
 export default function Navigation() {
@@ -28,10 +28,11 @@ export default function Navigation() {
             tabBarStyle: { display: 'none' }
           }}
         />
+        <Tab.Screen name={'HomeStack'} component={HomeStack} options={{ title: ' CONFERENCIAS', headerShown: false }} />
         <Tab.Screen
-          name={'HomeStack'}
-          component={HomeStack}
-          options={{ title: 'PROXIMAS CONFERENCIAS', headerShown: false }}
+          name={'FavoritoStack'}
+          component={FavoritoStack}
+          options={{ title: ' FAVORITOS', headerShown: false }}
         />
       </Tab.Navigator>
     </NavigationContainer>
@@ -44,7 +45,10 @@ function screenOptions(route, color, size) {
     iconName = 'user';
   }
   if (route.name === 'HomeStack') {
-    iconName = 'dollar';
+    iconName = 'home';
+  }
+  if (route.name === 'FavoritoStack') {
+    iconName = 'heart';
   }
   return <Icon color={color} size={size} name={iconName} />;
 }

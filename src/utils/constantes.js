@@ -9,5 +9,5 @@ export const FACEBOOK_APP_ID = '2453413678187674';
 export const REDIRECT_URI = 'https://auth.expo.io/@rettodevelop/retto_movil';
 
 //COLORES DE LA APP
-export const COLOR_PRIMARIO = '#008000';
+export const COLOR_PRIMARIO = '#15803d';
 export const COLOR_SECUNDARIO = '#facc15';

@@ -4,17 +4,19 @@ import { useNavigation } from '@react-navigation/native';
 import Input from '../Input';
 import Button from '../Button';
 import Icon from '../Icon';
-import { useDispatch, useSelector } from 'react-redux';
-import { loginAction } from '../../actions/loginAction';
 
-export default function Login() {
+export default function Login({ setSesion }) {
   const navigation = useNavigation();
-  const dispatch = useDispatch();
-  const loading = useSelector(state => state.loginReducer.loading);
+  const [loading, setloading] = useState(false);
+
+  const fakeUser = {
+    username: 'proyectoSIE@gmail.com',
+    password: '12345678'
+  };
 
   const [form, setForm] = useState({
-    username: 'rettodeveloper@gmail.com',
-    password: '',
+    username: 'proyectoSIE@gmail.com',
+    password: '12345678',
     grant_type: 'password'
   });
 
@@ -29,10 +31,17 @@ export default function Login() {
     navigation.navigate('HomeStack', { screen: 'home' });
   };
 
+  const esUsuario = () => {
+    let esUsuario = false;
+    if (form.username == fakeUser.username && form.password == fakeUser.password) return true;
+    return esUsuario;
+  };
+
   const loguear = () => {
-    nav();
-    /* console.log('FORM', form);
-    dispatch(loginAction(form, nav)); */
+    if (esUsuario) {
+      nav();
+      setSesion(true);
+    }
   };
 
   const cambiarContrasenia = () => {

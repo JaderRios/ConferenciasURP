@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "image": "https://via.placeholder.com/100",
+    "title": "Tendencias Emergentes en Inteligencia Artificial"
+  },
+  {
+    "id": "2",
+    "image": "https://via.placeholder.com/100",
+    "title": "Ciberseguridad en la Era Digital"
+  },
+  {
+    "id": "3",
+    "image": "https://via.placeholder.com/100",
+    "title": "Optimización de Algoritmos en Big Data"
+  },
+  {
+    "id": "4",
+    "image": "https://via.placeholder.com/100",
+    "title": "Innovaciones en Desarrollo de Aplicaciones Móviles"
+  },
+  {
+    "id": "5",
+    "image": "https://via.placeholder.com/100",
+    "title": "El Futuro de la Computación Cuántica"
+  },
+  {
+    "id": "6",
+    "image": "https://via.placeholder.com/100",
+    "title": "Blockchain y su Impacto en los Sistemas Financieros"
+  }
+]

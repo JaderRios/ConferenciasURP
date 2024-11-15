@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Main from '../../screens/Main';
 import ChangePassword from '../../screens/ChangePassword';
 import CreateAccount from '../../screens/CreateAccount';
+import { COLOR_PRIMARIO } from '../../utils/constantes';
 
 const Stack = createNativeStackNavigator();
 
